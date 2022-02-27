@@ -8,6 +8,116 @@
 
 }
 
+.about-me {
+    padding: 1rem;
+    max-width: 1200px;
+}
+
+.self-img {
+    padding: 1rem;
+    display: inline-block;
+    width: 50%;
+}
+
+.self-img img {
+    max-width: 100%;
+    max-height: 600px;
+}
+
+.img-fit img{
+    border-radius: 20px;
+    width: 80%;
+}
+
+.img-fit:hover::before {
+    transform: translate(0,0);
+}
+
+.img-fit:hover::after {
+    transform: translate(0,0);
+}
+
+
+.img-fit img {
+    filter: grayscale(100%);
+    transition: filter 1s;
+}
+
+
+.img-fit:hover img {
+    filter : brightness(500%);
+    filter: none;
+}
+
+
+.desc {
+    padding: 1rem;
+    display: inline-block;
+    width: 49%;
+    align-items: center;
+}
+
+.desc h1 {
+    margin-bottom: 1rem;
+}
+
+.desc p {
+    font-size: 1.3rem;
+}
+
+.self-img {
+    vertical-align: top;
+    border-radius: 30px;
+}
+
+@media (max-width: 800px) {
+    .desc, .self-img {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+.about-me {
+    margin: auto;
+}
+
+.about-me .desc {
+    color: white;
+}
+
+.descabotme >p{
+    font-size: 17px !important;
+}
+
+.img-fit img{
+    border-radius: 40px;
+}
+
+.about-container {
+    animation: animate 10s ease infinite;
+    background: linear-gradient(-45deg, #556e4c, #192916, #090c08, #7db16b);
+	background-size: 400% 400%;
+	width: 100%;
+	height: auto;
+}
+
+
+@keyframes animate {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.lurusindesc{
+    display: flex;
+}
+
 .v1{
     animation: vid1 4s ease-in-out infinite;
     animation-direction: alternate;
@@ -88,7 +198,8 @@
 }
 
 .circle{
-    margin : 12px;
+    margin : 17px;
+    justify-content: center;
 }
 
 .circle{
@@ -201,8 +312,6 @@
     padding: 17px;
     width: 170px;
     text-align: left;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
     color: rgb(0, 0, 0);
     background-size: cover;
     background-position: center;
@@ -223,11 +332,17 @@
     position: fixed;
     top: 0;
     z-index: 999;
+    width: 100vw;
+    max-width: 100vw;
 }
 
 .navbar .name-logo {
     display: flex;
     align-items: center;
+}
+
+.navbar-id{
+    display: flex;
 }
 
 .nav-list {
@@ -246,7 +361,7 @@
 }
 
 .nav-item:hover .nav-link {
-    color: #556e4c;
+    color: #4d5ef0;
 }
 
 .menu-icon span img {
@@ -349,19 +464,14 @@
     align-items: center;
 }
 
-.aboutme{
-    display: flex;
-    width: 100%;
-    align-items: center;
-    
-}
-
 .aboutmecontainer{
     animation: animate 13s ease infinite;
     background: linear-gradient(-45deg, #556e4c, #192916, #090c08, #7db16b);
 	background-size: 400% 400%;
 	width: 100%;
 	height: auto;
+    display: flex;
+    justify-content: center;
 }
 
 @keyframes animate {
@@ -374,44 +484,6 @@
 	100% {
 		background-position: 0% 50%;
 	}
-}
-
-.aboutmedesc{
-    color: white;
-    vertical-align: top;
-    padding: 1rem;
-    display: inline-block;
-    width: 45%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: justify;
-}
-
-.aboutme-photo{
-    padding: 1rem;
-    width: auto;
-    display: inline-block;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-.aboutme-photo img{
-    border-radius: 15px;
-    margin-left: 10px;
-}
-
-.photo{
-    display: block;
-    max-width: 100%;
-    max-height: 400px;
-}
-
-.introduction-desc button{
-    padding: 0.7rem;
-    border-radius: 15px;
-    border: none;
-    color: rgb(0, 0, 0);
-    background-color: black;
 }
 
 .skill-container {
@@ -457,6 +529,7 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    padding: 0.5rem;
 }
 
 .skill:hover::before {
@@ -476,7 +549,9 @@
     transition: filter 1s;
 }
 
+
 .skill:hover img {
+    filter : brightness(500%);
     filter: none;
 }
 
@@ -498,7 +573,7 @@
     align-items: center;
 }
 
-.tulisanoi {
+.porto .portolayout > h1{
     Opacity: 100% !important;
 }
 
@@ -506,7 +581,7 @@
     background-color: #000000;
     padding: 1.5rem;
     margin: center;
-    opacity: 60%;
+    opacity: 65%;
 }
 
 .portoborder{
@@ -533,7 +608,8 @@
     display: flex;
     justify-content: center;
     text-align: center;
-    width: 500px;
+    width: 450px;
+    padding: 1rem;
     align-items: center;
 }
 
@@ -549,9 +625,12 @@
     width: 400px;
     height: auto;
     padding: 1rem;
-    margin-left: 1rem;
     border-radius: 30px;
     outline: #000000;
+}
+
+.portoimg img{
+    margin: auto;
 }
 
 .portoimg2 {
@@ -590,7 +669,6 @@
 	width: 100%;
 	height: auto;
 }
-
 
 @keyframes animate {
 	0% {
@@ -668,8 +746,7 @@
     max-width: 200px;
     margin: auto;
     font-size: 13px;
-    font-style: normal;
-    
+    font-style: normal;   
 }
 
 .contactcolor{
@@ -826,6 +903,8 @@ form button {
     font-size: 10px;
     color: rgb(255, 255, 255);
     padding: 0.01rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
 }
 
 .licensecolor{
