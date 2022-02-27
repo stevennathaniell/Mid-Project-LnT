@@ -645,7 +645,6 @@
     width: 400px;
     height: auto;
     padding: 1rem;
-    margin-left: 1rem;
     border-radius: 30px;
 }
 
@@ -711,7 +710,11 @@
     .contact-img, .contact-form {
         width: 100%;
     }
+    .portoimg, .portoimg2{
+        width: auto;
+    }
 }
+
 
 .email {
     background-color: black;
